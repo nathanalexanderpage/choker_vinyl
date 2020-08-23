@@ -1,0 +1,21 @@
+{
+  "name": "choker_bot",
+  "version": "0.1.0",
+  "description": "A scraper to get Jorel a cheap vinyl",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "scrape",
+    "choker"
+  ],
+  "author": "Nathan Alexander Page",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^8.2.0",
+    "gmail-send": "^1.8.10",
+    "puppeteer": "^5.2.1"
+  }
+}
