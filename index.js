@@ -11,7 +11,11 @@ const send = require('gmail-send')({
 
 try {
     (async () => {
-      const browser = await puppeteer.launch();
+      const browser = await puppeteer.launch({
+        headless: true,
+        executablePath: process.env.CHROMIUM_EXE_ADDRESS,
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      });
       const page = await browser.newPage();
       await page.goto('https://shop.choker.cc/products/honeybloom-vinyl?variant=21625384829017');
       await page.waitForSelector('button#AddToCart')
